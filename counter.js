@@ -16,5 +16,10 @@ window.addEventListener("click", function (event) {
     if (parseInt(NewWrapper.innerText) > 1) {
       NewWrapper.innerText = --NewWrapper.innerText;
     }
+    // Проверка на поиск родителя. если родитель найдем то мы в корзине.
+
+    if (event.target.closest(".items__in__card")) {
+      console.log("Ты в корзине");
+    }
   }
 });

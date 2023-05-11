@@ -15,7 +15,6 @@ window.addEventListener("click", function (event) {
       price: card.querySelector(".price__item").innerText,
       counter: card.querySelector("[data-counter]").innerText,
     };
-    console.log(productInfo);
 
     // Проверяем есть ли такой товар в корзине
 
@@ -63,5 +62,9 @@ window.addEventListener("click", function (event) {
       // Отобразить товар в корзине
       cartWrapper.insertAdjacentHTML("beforeend", catditemHTML);
     }
+
+    // Сбрасываем счетчик количества товаров после добавления в корзину
+
+    card.querySelector("[data-counter]").innerText = "1";
   }
 });
